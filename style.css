@@ -1,0 +1,439 @@
+/* Tema Warna Perkebunan Kopi: Hijau Daun & Cokelat Sangrai */
+:root {
+    --hijau-tua: #1f3d23;
+    --hijau-utama: #386641;
+    --hijau-cerah: #6a994e;
+    --hijau-lembut: #eef5ea;
+    --cokelat-tua: #3b2319;
+    --cokelat-kopi: #5c3a28;
+    --cokelat-karamel: #8c583a;
+    --latte-bg: #f6f2ec;
+    --putih: #ffffff;
+    --teks-utama: #231914;
+    --teks-muted: #6b5b52;
+    --border-halus: #e6ddd2;
+    --bayangan-lembut: 0 10px 25px rgba(59, 35, 25, 0.07);
+    --bayangan-hover: 0 14px 30px rgba(31, 61, 35, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: var(--latte-bg);
+    color: var(--teks-utama);
+    line-height: 1.65;
+}
+
+/* Header dengan aksen modern */
+header {
+    background: linear-gradient(125deg, var(--hijau-tua) 0%, var(--hijau-utama) 52%, var(--cokelat-kopi) 100%);
+    color: var(--putih);
+    padding: 2.6rem 1.25rem;
+    text-align: center;
+    border-bottom: 4px solid var(--cokelat-karamel);
+}
+
+.header-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #f3ece4;
+    font-weight: 400;
+}
+
+/* Navigasi Sticky */
+nav {
+    background-color: var(--cokelat-tua);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0.45rem 1rem;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: #f7f2ec;
+    text-decoration: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.94rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--hijau-utama);
+    color: var(--putih);
+    transform: translateY(-1px);
+}
+
+/* Kontainer Utama */
+main {
+    max-width: 1120px;
+    margin: 2.25rem auto;
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+/* Kartu Konten */
+.card {
+    background-color: var(--putih);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--bayangan-lembut);
+    border: 1px solid var(--border-halus);
+    border-top: 5px solid var(--hijau-utama);
+    transition: box-shadow 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: var(--bayangan-hover);
+}
+
+.card h2 {
+    color: var(--cokelat-tua);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 2px solid var(--hijau-lembut);
+}
+
+.card > p {
+    color: var(--teks-muted);
+    font-size: 0.98rem;
+}
+
+/* Grid Grafik */
+.charts-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.chart-box {
+    flex: 1 1 440px;
+    background-color: #fcfaf7;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-halus);
+}
+
+.chart-box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--hijau-tua);
+    margin-bottom: 0.9rem;
+    text-align: center;
+}
+
+/* Form Input */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem 1.35rem;
+    margin-top: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--cokelat-kopi);
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    padding: 0.72rem 0.9rem;
+    border: 1.5px solid #d5c8bc;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #fffdfb;
+    color: var(--teks-utama);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #a39389;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--hijau-utama);
+    background-color: var(--putih);
+    box-shadow: 0 0 0 4px rgba(56, 102, 65, 0.14);
+}
+
+.form-actions {
+    grid-column: span 2;
+    margin-top: 0.4rem;
+}
+
+/* Tombol */
+.btn-primary {
+    background: linear-gradient(135deg, var(--hijau-utama), var(--hijau-tua));
+    color: var(--putih);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(31, 61, 35, 0.22);
+    transition: transform 0.18s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(31, 61, 35, 0.28);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-hapus {
+    background-color: #c62828;
+    color: var(--putih);
+    border: none;
+    padding: 0.42rem 0.85rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-hapus:hover {
+    background-color: #9e1b1b;
+    transform: translateY(-1px);
+}
+
+/* Notifikasi / Alert */
+.alert {
+    padding: 0.9rem 1.15rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    font-weight: 600;
+    font-size: 0.93rem;
+}
+
+.alert.success {
+    background-color: var(--hijau-lembut);
+    color: var(--hijau-tua);
+    border: 1.5px solid var(--hijau-cerah);
+}
+
+.alert.error {
+    background-color: #fdecea;
+    color: #a91d1d;
+    border: 1.5px solid #ef9a9a;
+}
+
+.hidden {
+    display: none;
+}
+
+.divider {
+    border: 0;
+    border-top: 1.5px dashed #dfd4c8;
+    margin: 1.75rem 0;
+}
+
+/* Kolom Pencarian */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.15rem;
+    background-color: #faf7f3;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-halus);
+}
+
+.search-bar label {
+    color: var(--cokelat-tua);
+    font-size: 0.92rem;
+}
+
+.search-bar input {
+    flex: 1;
+    max-width: 380px;
+    padding: 0.6rem 0.85rem;
+    border: 1.5px solid #d5c8bc;
+    border-radius: 8px;
+    font-size: 0.93rem;
+    background-color: var(--putih);
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--hijau-utama);
+    box-shadow: 0 0 0 3px rgba(56, 102, 65, 0.14);
+}
+
+/* Tabel Modern & Responsif */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border-halus);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--putih);
+}
+
+thead {
+    background: linear-gradient(90deg, var(--hijau-tua), var(--hijau-utama));
+    color: var(--putih);
+}
+
+th {
+    padding: 0.95rem 1.05rem;
+    text-align: left;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 0.88rem 1.05rem;
+    text-align: left;
+    border-bottom: 1px solid #ede4da;
+    font-size: 0.94rem;
+    color: var(--teks-utama);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fcfaf7;
+}
+
+tbody tr:hover {
+    background-color: var(--hijau-lembut);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--cokelat-tua), var(--cokelat-kopi));
+    color: var(--putih);
+    text-align: center;
+    padding: 2.2rem 1.25rem;
+    margin-top: 3.5rem;
+    border-top: 4px solid var(--hijau-utama);
+}
+
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+footer h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #efe5dc;
+}
+
+footer .copyright {
+    margin-top: 0.85rem;
+    font-size: 0.82rem;
+    color: #d5c4b6;
+}
+
+/* Responsif Tablet & HP */
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.55rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    nav ul li a {
+        display: block;
+        border-radius: 8px;
+        padding: 0.55rem 1rem;
+    }
+
+    .card {
+        padding: 1.4rem;
+        border-radius: 12px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        grid-column: span 1;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input {
+        max-width: 100%;
+    }
+}
